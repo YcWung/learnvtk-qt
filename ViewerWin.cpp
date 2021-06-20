@@ -25,3 +25,7 @@ ViewerWin::~ViewerWin() {}
 void ViewerWin::toggle_select_region(bool toggled) {
   pcv->interactor_style()->SetSelectionMode(toggled);
 }
+
+void ViewerWin::pick_focal_point() {
+  pcv->interactor_style()->SetPickFocalPoint(true);
+}

@@ -14,6 +14,7 @@ class ViewerWin : public QMainWindow {
 
  protected slots:
   void toggle_select_region(bool);
+  void pick_focal_point();
 
  private:
   Ui_ViewerWin* ui;

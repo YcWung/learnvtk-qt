@@ -36,6 +36,8 @@
     <bool>false</bool>
    </attribute>
    <addaction name="action_toggle_select_region"/>
+   <addaction name="separator"/>
+   <addaction name="action_pick_focal_point"/>
   </widget>
   <action name="action_toggle_select_region">
    <property name="checkable">
@@ -43,6 +45,11 @@
    </property>
    <property name="text">
     <string>Select Region</string>
+   </property>
+  </action>
+  <action name="action_pick_focal_point">
+   <property name="text">
+    <string>Pick Focal Point</string>
    </property>
   </action>
  </widget>
@@ -74,8 +81,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>action_pick_focal_point</sender>
+   <signal>triggered()</signal>
+   <receiver>ViewerWin</receiver>
+   <slot>pick_focal_point()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>toggle_select_region(bool)</slot>
+  <slot>pick_focal_point()</slot>
  </slots>
 </ui>
